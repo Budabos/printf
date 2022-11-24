@@ -1,5 +1,10 @@
 #include "main.h"
-
+/**
+ *get_flags - return the flag
+ *@format: format
+ *@count: counter
+ *Return: flags
+ */
 int get_flags(const char *format, int *count)
 {
 	int j, curr_count;

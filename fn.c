@@ -42,7 +42,7 @@ int print_string(va_list types, char buffer[], int flags, int width, int precisi
 		}
 		else
 		{
-			for (count = widthh - len; count > 0; count--)
+			for (count = width - len; count > 0; count--)
 				write(1, " ", 1);
 			write(1, &str[0], len);
 			return (width);
@@ -51,7 +51,7 @@ int print_string(va_list types, char buffer[], int flags, int width, int precisi
 	return (write(1, str, len));
 }
 
-int print_percent(va_list types, car buffer[], int flags, int width, int precision, int size)
+int print_percent(va_list types, char buffer[], int flags, int width, int precision, int size)
 {
 	UNUSED(types);
 	UNUSED(buffer);
@@ -91,7 +91,7 @@ int print_int(va_list types, char buffer[], int flags, int width, int precision,
 		num /= 10;
 	}
 	count++;
-	return (write_number(is_negative, count, buffer, flags, precision, size));
+	return (write_number(is_negative, count, buffer, flags, width, precision, size));
 
 
 }

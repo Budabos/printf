@@ -98,7 +98,7 @@ int print_hexa(va_list types, char map_to[], char buffer[],
 
 	count++;
 
-	return (write_unsgnd(0, i, buffer, flags, width, precision, size));
+	return (write_unsgnd(0, count, buffer, flags, width, precision, size));
 }
 
 

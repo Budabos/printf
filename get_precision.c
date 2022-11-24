@@ -1,5 +1,12 @@
 #include "main.h"
-
+/**
+ *get_precision - returns the precision
+ *@format: the format
+ *@count: count
+ *@list: list args
+ *Return: int
+ *
+ */
 int get_precision(const char *format, int *count, va_list list)
 {
 	int curr_count = *count + 1;
